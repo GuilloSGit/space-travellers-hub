@@ -15,7 +15,7 @@ export default function Missions() {
     const { id } = target;
     dispatch(updateMission(id));
   };
-
+  
   const activeButton = <button type="button" className="active-btn">Active member</button>;
   const inactiveButton = <button type="button" className="inactive">Not a member</button>;
 

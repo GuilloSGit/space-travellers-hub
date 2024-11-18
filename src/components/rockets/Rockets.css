@@ -11,18 +11,21 @@ h1 {
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 280px 1fr;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .rocket-img,
 .rocket-description {
-  margin: 10px;
+  width: 43%;
 }
 
 .img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .reserve-rocket {
@@ -59,4 +62,78 @@ h1 {
 
 .cancel-reservation:hover {
   cursor: pointer;
+}
+
+.single-card {
+  border: 0.5px solid #cfcfcf;
+  padding: 0 0 1em 0;
+  border-radius: 10px;
+
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.246);
+  background: linear-gradient(
+      45deg,
+      transparent 15%,
+      #d0d0dd 15%,
+      #d0d0dd 20%,
+      transparent 20%,
+      transparent 80%,
+      #d0d0dd 80%,
+      #d0d0dd 85%,
+      transparent 85%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 15%,
+      #d0d0dd 15%,
+      #d0d0dd 20%,
+      transparent 20%,
+      transparent 80%,
+      #d0d0dd 80%,
+      #d0d0dd 85%,
+      transparent 85%
+    ),
+    radial-gradient(
+      circle at top,
+      transparent 9%,
+      #d0d0dd 10%,
+      #d0d0dd 15%,
+      transparent 16%
+    ),
+    radial-gradient(
+      circle at bottom,
+      transparent 9%,
+      #d0d0dd 10%,
+      #d0d0dd 15%,
+      transparent 16%
+    ),
+    radial-gradient(
+      circle at right,
+      transparent 9%,
+      #d0d0dd 10%,
+      #d0d0dd 15%,
+      transparent 16%
+    ),
+    radial-gradient(
+      circle at left,
+      transparent 9%,
+      #d0d0dd 10%,
+      #d0d0dd 15%,
+      transparent 16%
+    );
+  background-size: .5em .5em;
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rocket-img,
+  .rocket-description {
+    width: 85%;
+  }
 }

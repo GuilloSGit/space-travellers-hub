@@ -19,7 +19,7 @@ const Rockets = () => {
   return (
     <div className="cards-container">
       {allRockets.map((rocket) => ((
-        <div key={rocket.id} className="card">
+        <div key={rocket.id} className="card single-card">
           <div className="rocket-img">
             <img className="img" src={rocket.flickr_image} alt="rocket" />
           </div>
